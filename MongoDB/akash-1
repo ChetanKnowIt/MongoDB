@@ -1,0 +1,13 @@
+select *
+from emp 
+where sal>2000 and comm>200;
+
+select * from dept;
+
+
+select e.ename,e.empno,e.job,e.sal,d.deptno
+from emp e,dept d;
+
+select e.ename,e.empno,e.job,e.sal,d.deptno
+from emp e
+cross join dept d;

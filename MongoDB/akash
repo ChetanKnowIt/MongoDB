@@ -1,0 +1,5 @@
+db.movies.aggregate([{$sort:{rating:-1}},{$limit:5},{$project:{name:1}}])
+
+db.movie.aggregate([{$group:{_id:null,sump:{$sum:'$price'},avgp:{$avg:'$rating'}}}])
+
+db.movie.aggregate([{$match:{name:/^[Kk].*/}},{$group:{_id:null,}}])
